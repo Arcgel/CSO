@@ -54,23 +54,19 @@ onBeforeUnmount(() => {
         </div>
       </template>
     </Calendar>
-    <ul
-      class="dropdown-menu show ps-3"
-      v-if="dropdownVisible"
-      :style="{ position: 'absolute', top: dropdownPosition.top + 'px', left: dropdownPosition.left + 'px', zIndex: 9999 }"
-      @click="dropdownVisible = false"
-    >
-      <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#CreateEventBackdrop">Create</a></li>
-      <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#ViewEventBackdrop">View</a></li>
-      <!-- <li><router-link to="/Add" class="text-decoration-none text-black">Edit</router-link></li>
-      <li><router-link to="/Add" class="text-decoration-none text-black">Join</router-link></li> -->
-    </ul>
+      <ul
+        class="dropdown-menu show ps-3"
+        v-if="dropdownVisible"
+        :style="{ position: 'absolute', top: dropdownPosition.top + 'px', left: dropdownPosition.left + 'px', zIndex: 9999 }"
+        @click="dropdownVisible = false"
+      >
+        <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#CreateEventBackdrop">Create</a></li>
+        <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#ViewEventBackdrop">View</a></li>
+        <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#CreateEventBackdrop">Edit</a></li>
+        <li><a href="#" class="pe-auto text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#JoinBackdrop">Join</a></li>
+      </ul>
   </div>
-
-<!-- ViewEventBackdrop -->
-  
-
-<!-- Create Form  -->
+<!-- Create Form / Edit  -->
 
 <div class="modal fade" id="CreateEventBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="CreateEventBackdrop" aria-hidden="true">
   <div class="modal-dialog">
@@ -161,9 +157,33 @@ onBeforeUnmount(() => {
   </div>
 </div>
 
+<!----- Join ------>
 
+<div class="modal fade" id="JoinBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="JoinBackdrop" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" class="text-decoration-none text-black"><i class="fa-solid fa-left-long pe-auto" data-bs-dismiss="modal" aria-label="Close" ></i></a>
+        <h1 class="modal-title fs-5 ps-2" id="staticBackdropLabel">Join Event</h1>
+      </div>
+      <div class="modal-body">
+          <form class="mb-3">
+            <div class="row align-items-end">
+               <div class="col-sm-9 text-start">
+                  <i class="fa-solid fa-link icon-relative"></i>
+                  <input type="text" class="w-100 form-control ps-5" required>
+               </div>
+               <div class="col-sm-3">
+                  <a href="#" class="btn w-100 background-color-gray">Join</a>
+               </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<!-- ----------- -->
 
 
 

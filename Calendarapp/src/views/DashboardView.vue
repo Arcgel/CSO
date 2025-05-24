@@ -68,7 +68,9 @@ function toggleWidth() {
       <div :class="isShrunk ? 'col-md-10' : 'col-md-10'">
         <div class="container-fluid">
           <div class="notification">
-           <a type="button"><i class="fa-solid fa-bell"></i></a>
+          <a role="button" tabindex="0">
+            <i class="fa-solid fa-bell"></i>
+          </a>
           </div>
           <div class="text-center custom-height h-100 w-100 align-content-center my-5 pt-3" :class="isShrunk ? ['ps-100']  : ['']">
             <Calendar />
