@@ -1,64 +1,74 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-body{
- background-color: #D1D5D0 !important;
+body {
+  background-color: #d1d5d0 !important;
 }
 
 .vc-day-content {
-
-    display: block !important;
-    line-height: auto !important;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    width: 123px !important;
-    height: 80px !important;
-    border: 2px solid black !important;
-    border-radius: 10px !important;
-    text-align: start !important;
-    padding-top: 1px !important;
-    padding-left: 5px !important;
-
+  display: block !important;
+  line-height: auto !important;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 123px !important;
+  height: 80px !important;
+  border: 2px solid black !important;
+  border-radius: 10px !important;
+  text-align: start !important;
+  padding-top: 1px !important;
+  padding-left: 5px !important;
 }
 
-.vc-week, .vc-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    position: relative;
-    gap: 10px;
-    padding-bottom: 5px;
+.vc-week,
+.vc-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  position: relative;
+  gap: 10px;
+  padding-bottom: 5px;
 }
 .vc-bordered {
-    padding: 10px;
+  padding: 10px;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0 !important;
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--bs-heading-color);
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
 }
-.modal-dialog{
+.modal-dialog {
   width: 55% !important;
 }
-.icon-relative{
-    position: relative;
-    top: 33px;
-    left: 15px;
-    font-size: 20px;
+.icon-relative {
+  position: relative;
+  top: 33px;
+  left: 15px;
+  font-size: 20px;
 }
-.background-color-gray{
-    background-color: #D9D9D9 !important;
+.background-color-gray {
+  background-color: #d9d9d9 !important;
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
-        max-width: none !important;
-        margin-right: auto;
-        margin-left: auto;
-    }
+  .modal-dialog {
+    max-width: none !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
