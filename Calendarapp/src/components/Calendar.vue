@@ -269,4 +269,11 @@ onBeforeUnmount(() => {
   display: block;
   min-width: 150px;
 }
+
+.btn:hover,.btn:active{
+  color: white !important;
+  background: rgb(252 23 0) !important;
+  border: 1px solid white !important;
+  transition: 0.35s; 
+}
 </style>

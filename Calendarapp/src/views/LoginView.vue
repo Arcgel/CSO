@@ -10,7 +10,7 @@ const loggingin = async() => {
   const storedusers: string | null = localStorage.getItem('user')
 
   if(!storedusers){
-    alert('No Accound found, Please create one');
+    alert('No Account found, Please create one');
     return;
   }
 
@@ -28,7 +28,7 @@ const loggingin = async() => {
 
 <template>
   <div class="container-fluid login-body">
-    <div class="bg-primary p-5 w-50 container-custom">
+    <div class="bg-primary p-5 container-custom">
       <form @submit.prevent="loggingin">
         <div class="mb-3">
           <i class="fa-solid fa-envelope icon-relative"></i>
@@ -38,6 +38,7 @@ const loggingin = async() => {
             v-model="email"
             id="emailInput"
             aria-describedby="emailHelp"
+            placeholder="Email"
             required
           />
         </div>
@@ -48,6 +49,7 @@ const loggingin = async() => {
             class="form-control ps-5 input-radius"
             v-model="password"
             id="passwordInput"
+            placeholder="Password"
             aria-describedby="emailHelp"
             required
           />
@@ -57,7 +59,7 @@ const loggingin = async() => {
           <label class="form-check-label" for="exampleCheck1">Show password</label>
         </div>
         <div class="mt-2 mb-2">
-          <span>Don’t have an account? <router-link to="/Register">Register</router-link></span>
+          <span>Create new account ? <router-link to="/Register">Register</router-link></span>
         </div>
         <div class="text-center">
           <button type="submit" class="btn custom-btn fw-bold">Login</button>
@@ -72,22 +74,10 @@ const loggingin = async() => {
   height: 100%;
   position: absolute;
   align-content: center;
-}
-.container-custom {
-  justify-self: center;
-  border-radius: 20px;
-  box-shadow: 0px 15px 15px 10px #0000008c;
-  width: 35% !important;
-  background-color: #00000066 !important;
+  background-image: url('/image/wallpapersden.com_minimal-reflection-sunset_1920x1080.jpg');
+  background-size: cover;
 }
 
-.custom-btn {
-  width: 177px;
-  height: 41px;
-  border-radius: 15px;
-  background-color: #d9d9d9;
-  color: black;
-}
 .input-radius {
   border-radius: 15px;
 }

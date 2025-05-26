@@ -11,7 +11,8 @@ function toggleWidth() {
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="custom-background">
+    <div class="container-fluid">
     <div class="row">
       <div
         :class="[
@@ -26,10 +27,10 @@ function toggleWidth() {
         <div class="row gap-80 align-items-center justify-content-center">
           <div class="row px-0 justify-content-between align-items-center">
             <div class="col-6" v-if="!isShrunk">
-              <h6 class="text-nowrap">CALENDAR SYSTEM</h6>
+              <h6 class="fw-bold">CALENDAR <span class="custom-color">SYSTEM</span> </h6>
             </div>
             <div :class="isShrunk ? ['col-0', 'text-center'] : ['col-4', 'text-end']">
-              <a class="btn text-black" @click="toggleWidth">
+              <a class="btn text-white" @click="toggleWidth">
                 <i class="fa-solid fa-bars"></i>
               </a>
             </div>
@@ -43,14 +44,14 @@ function toggleWidth() {
               <div class="col-2 d-flex align-items-center justify-content-center" v-if="isShrunk">
                 <div class="d-flex flex-column text-center">
                   <span class="fw-bold"> C A L E N D A R </span>
-                  <span class="pt-5 fw-bold" v-if="isShrunk"> S Y S T E M </span>
+                  <span class="pt-5 fw-bold custom-color" v-if="isShrunk"> S Y S T E M </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="text-center position-relative" :class="isShrunk ? ['top-20'] : ['top-75']">
-          <router-link to="/" class="btn text-center">
+          <router-link to="/" class="btn text-center text-white">
             <i class="fa-solid fa-right-from-bracket"></i> <span v-if="!isShrunk">Log out</span>
           </router-link>
         </div>
@@ -72,6 +73,7 @@ function toggleWidth() {
         </div>
       </div>
     </div>
+    </div>
   </div>
 </template>
 
@@ -89,8 +91,7 @@ function toggleWidth() {
   padding-left: 100px;
 }
 .side-bar {
-  background-color: #d9d9d9;
-  color: black !important;
+  background-color: #2a2a2a;
   transition: width 0.3s ease;
 }
 
@@ -111,4 +112,13 @@ function toggleWidth() {
   padding: 0;
   text-align: center;
 }
+.custom-color{
+  color: #ff0000;
+  text-shadow: -1px 1px 0px white;
+}
+.custom-background{
+  background-image: url('/image/im-just-going-to-leave-this-here-4k-backgrounds-website-for-v0-acnbp4hyin9e1.png');
+  background-size: cover;
+}
+
 </style>
