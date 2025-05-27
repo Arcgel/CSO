@@ -1,30 +1,141 @@
-
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.vc-header .vc-title {
+    background: transparent;
+}
+.vc-weekday {
+    color: white;
+}
+.vc-day-content {
+  display: block !important;
+  line-height: auto !important;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 123px !important;
+  height: 80px !important;
+  border: 2px solid black !important;
+  border-radius: 10px !important;
+  text-align: start !important;
+  padding-top: 1px !important;
+  padding-left: 5px !important;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.vc-day-content[data-v-d3cca5a8] {
+    box-shadow: 0px 0px 0px 1px;
+    border: none !important;
+}
+
+.vc-week,
+.vc-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  position: relative;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.vc-bordered {
+  padding: 10px;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+.modal-dialog {
+  width: 55% !important;
+}
+.icon-relative {
+  position: relative;
+  top: 33px;
+  left: 15px;
+  font-size: 20px;
+}
+.background-color-gray {
+  background-color: #d9d9d9 !important;
+}
+
+.container-custom {
+  justify-self: center;
+  border-radius: 20px;
+  box-shadow: 0px 15px 15px 10px #0000008c;
+  width: 35% !important;
+  background: RGB(75, 53, 42);
+  background: linear-gradient(241deg, rgb(252 23 0) 0%, rgb(268 269 260) 91%);
+}
+
+.vc-focus:focus-within {
+    box-shadow: none !important;
+}
+.vc-header .vc-arrow:hover {
+    background: rgba(0, 0, 0, 0.242) !important;
+}
+.vc-base-icon {
+    stroke: #00000087 !important;
+}
+
+/* Login and Register button  */
+
+.custom-btn {
+  width: 177px !important;
+  height: 41px !important;
+  border-radius: 15px !important;
+  background-color: #d9d9d9 !important;
+  color: black !important;
+  font-size: 14px !important;
+}
+.custom-btn:hover,.custom-btn:active{
+  color: white !important;
+  background: transparent !important;
+  border: 1px solid white !important;
+  transition: 0.35s;
+}
+
+/* -------------------------- */
+
+.vc-day-content:hover{
+    background-color: var(--vc-day-content-hover-bg) !important ;
+    background: #0000004f !important;
+    transform: scale(1.05) !important;
+    transition: 0.45s !important;
+    color: white !important;
+    box-shadow: 3px 4px 3px 0px black !important;
+}
+
+
+
+
+
+/* Responsive  */
+
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: none !important;
+    margin-right: auto;
+    margin-left: auto;
   }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
 }
