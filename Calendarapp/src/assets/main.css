@@ -84,7 +84,7 @@ h6 {
   box-shadow: 0px 15px 15px 10px #0000008c;
   width: 35% !important;
   background: RGB(75, 53, 42);
-  background: linear-gradient(241deg, rgb(252 23 0) 0%, rgb(268 269 260) 91%);
+  background: linear-gradient(240deg, #d06c54, #614689);
 }
 
 .vc-focus:focus-within {
@@ -104,7 +104,6 @@ h6 {
   height: 41px !important;
   border-radius: 15px !important;
   background-color: #d9d9d9 !important;
-  color: black !important;
   font-size: 14px !important;
 }
 .custom-btn:hover,.custom-btn:active{
