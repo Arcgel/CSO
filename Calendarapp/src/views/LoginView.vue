@@ -30,6 +30,8 @@ const loggingin = async() => {
   <div class="container-fluid login-body">
     <div class="bg-primary p-5 container-custom">
       <form @submit.prevent="loggingin">
+
+        <h3 class="text-center text-white mb-3 fw-bold">Login</h3>
         <div class="mb-3">
           <i class="fa-solid fa-envelope icon-relative"></i>
           <input
@@ -80,5 +82,63 @@ const loggingin = async() => {
 
 .input-radius {
   border-radius: 15px;
+}
+
+.fa-solid {
+  color: #3c445b;
+}
+
+a {
+  text-decoration: none;
+  color: #ee8c73;
+  font-weight: 600;
+}
+
+span {
+  color: white;
+}
+
+button.btn {
+  color: #3c445b;
+  margin-top: 20px;
+}
+
+.form-check-label {
+  color: white;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container-custom {
+    min-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    width: 90%;
+  }
+  
+  .form-control {
+    padding: 10px;
+  }
+
+  .icon-relative {
+    top: 37px
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+min-width: 450px
+  }
+
 }
 </style>
